@@ -7,9 +7,10 @@
 
 import Foundation
 struct HomeWork: Decodable {
-    let name: String
-    let category: String
-    let group: String
-    let htmlCode: [String]
+    let name: String?
+    let category: String?
+    let group: String?
+    let htmlCode: [String]?
+    let unicode: [String]?
 }
 
