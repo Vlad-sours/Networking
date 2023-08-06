@@ -17,6 +17,7 @@
 		A8FB4A0F216208E300026A1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FB4A0D216208E300026A1A /* Main.storyboard */; };
 		A8FB4A11216208E400026A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB4A10216208E400026A1A /* Assets.xcassets */; };
 		A8FB4A14216208E400026A1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FB4A12216208E400026A1A /* LaunchScreen.storyboard */; };
+		F5C87B102A8003690045CCEC /* HomeWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C87B0F2A8003690045CCEC /* HomeWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A8FB4A10216208E400026A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8FB4A13216208E400026A1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8FB4A15216208E400026A1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C87B0F2A8003690045CCEC /* HomeWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		A8FA2C8C2913E7C700EACFA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F5C87B0F2A8003690045CCEC /* HomeWork.swift */,
 				A8B9921529C791BF004C835D /* Course.swift */,
 			);
 			path = Models;
@@ -205,6 +208,7 @@
 				A8A6BC9D230D8CA00079433E /* MainViewController.swift in Sources */,
 				A8A6BCA3230D8D1C0079433E /* UserActionCell.swift in Sources */,
 				A8A6BC9F230D8CE40079433E /* CoursesViewController.swift in Sources */,
+				F5C87B102A8003690045CCEC /* HomeWork.swift in Sources */,
 				A8FB4A0C216208E300026A1A /* ImageViewController.swift in Sources */,
 				A8FB4A0A216208E300026A1A /* AppDelegate.swift in Sources */,
 			);

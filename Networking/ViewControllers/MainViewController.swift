@@ -8,6 +8,7 @@
 import UIKit
 
 enum Link: String {
+    case homeWorkUrl = "https://emojihub.yurace.pro/api/random"
     case imageURL = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
     case courseURL = "https://swiftbook.ru//wp-content/uploads/api/api_course"
     case coursesURL = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
@@ -69,7 +70,7 @@ final class MainViewController: UICollectionViewController {
         let userAction = userActions[indexPath.item]
         print(userAction)
         switch userAction {
-        case .homeWork: fetchCourse()
+        case .homeWork: fetchEmojiHub()
         case .showImage: performSegue(withIdentifier: "showImage", sender: nil)
         case .fetchCourse: fetchCourse()
         case .fetchCourses: fetchCourses()
@@ -112,6 +113,29 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Networking
 extension MainViewController {
+    private func fetchEmojiHub() {
+        guard let url = URL(string: Link.homeWorkUrl.rawValue) else {return}
+        
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            guard let data else {
+                print(error?.localizedDescription ?? "No error descriprion")
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            do {
+                let homeWork = try decoder.decode(HomeWork.self, from: data)
+                print(homeWork)
+                self?.showAlert(withStatus: .success)
+            } catch let error {
+                print(error.localizedDescription)
+                self?.showAlert(withStatus: .failed)
+            }
+            
+        }.resume()
+    }
+        
+    
     private func fetchCourse() {
         guard let url = URL(string: Link.courseURL.rawValue) else { return }
         
