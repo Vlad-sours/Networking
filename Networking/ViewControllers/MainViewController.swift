@@ -16,6 +16,7 @@ enum Link: String {
 }
 
 enum UserAction: String, CaseIterable {
+    case homeWork = "Home Work"
     case showImage = "Show Image"
     case fetchCourse = "Fetch Course"
     case fetchCourses = "Fetch Courses"
@@ -66,8 +67,9 @@ final class MainViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userAction = userActions[indexPath.item]
-        
+        print(userAction)
         switch userAction {
+        case .homeWork: fetchCourse()
         case .showImage: performSegue(withIdentifier: "showImage", sender: nil)
         case .fetchCourse: fetchCourse()
         case .fetchCourses: fetchCourses()
